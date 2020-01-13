@@ -1,0 +1,18 @@
+
+
+.navItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.divItem{
+    display: flex;
+    flex-basis: 400px;
+}
+
+.searchButton{
+    text-decoration: none;
+    color: white
+}
+
