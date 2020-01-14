@@ -9,6 +9,8 @@ const cors= require('cors');
 //Importing mongoose schema
 var Person = require('./models/person');
 
+var PORTNUM= process.env.PORT || 5000;
+
 //Connecting it to the mongodb with DB 'gfg'
 mongoose.Promise= global.Promise;
 mongoose.connect('mongodb://localhost:27017/persondatamern', {useNewUrlParser: true});
@@ -197,8 +199,7 @@ app.put('/person/:id', (req, res)=>{
     
 });
 
-
 //assigning the port
-app.listen(5000,function(){
-    console.log("Live at Port 5000");
+app.listen(PORTNUM,function(){
+    console.log("Live at Port "+ PORTNUM);
 });
