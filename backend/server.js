@@ -65,8 +65,6 @@ app.get('/person/pages',(req,res)=>{
                 
                 //res.json(data);
                 })
-
-            
         }
 });
 
