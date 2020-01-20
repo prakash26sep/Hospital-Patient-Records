@@ -9,7 +9,7 @@ const cors= require('cors');
 //Importing mongoose schema
 var Person = require('./models/person');
 
-var PORTNUM= process.env.PORT || 5000;
+var PORTNUM= process.env.PORT+1 || 5000;
 
 //Connecting it to the mongodb with DB 'gfg'
 
