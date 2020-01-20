@@ -1,2 +1,2 @@
-web: npm run dev
-other-web: npm  run other-web
+web: npm run start
+other-web: npm  run start-backend
