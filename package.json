@@ -23,7 +23,6 @@
   "scripts": {
     "start-backend": "cd backend && node server",
     "start": "set PORT= process.env.PORT && react-scripts start",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run start-backend\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
