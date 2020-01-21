@@ -10,6 +10,7 @@ const cors= require('cors');
 var Person = require('./models/person');
 
 var PORTNUM= process.env.PORT;
+console.log(process.env);
 
 //Connecting it to the mongodb with DB 'gfg'
 
