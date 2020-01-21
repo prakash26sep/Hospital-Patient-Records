@@ -28,7 +28,7 @@ class AllUsers extends Component{
 
     componentDidMount() {
 
-        axios.get(`http://localhost:${process.env.PORT}/person/pages`)
+        axios.get(`/person/pages`)
           .then(response => {
               totalResults= response.data.totalResult;
               this.setState({
@@ -40,7 +40,7 @@ class AllUsers extends Component{
 
 
 
-          axios.get(`http://localhost:${process.env.PORT}/person/pages?page=1`)
+          axios.get(`/person/pages?page=1`)
           .then(response => {
               this.setState({
                   "persons": response.data.data,
@@ -84,7 +84,7 @@ class AllUsers extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get(`http://localhost:${process.env.PORT}/person/pages?page=${n}`)
+        axios.get(`/person/pages?page=${n}`)
           .then(response => {
               this.setState({
                   "persons": response.data.data,
@@ -108,7 +108,7 @@ class AllUsers extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get(`http://localhost:${process.env.PORT}/person/pages?page=${n}`)
+        axios.get(`/person/pages?page=${n}`)
         .then(response => {
             this.setState({
                 "persons": response.data.data,
