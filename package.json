@@ -21,7 +21,7 @@
     "url": "^0.11.0"
   },
   "scripts": {
-    "start-backend": `cd backend && PORT=${process.env.PORT} forever start app`,
+    "start-backend": "cd backend && PORT="+process.env.PORT+" forever start app",
     "start": "set PORT= process.env.PORT && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
