@@ -84,7 +84,7 @@ class AllUsers extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get('/person/pages?page=${n}')
+        axios.get(`/person/pages?page=${n}`)
           .then(response => {
               this.setState({
                   "persons": response.data.data,
@@ -108,7 +108,7 @@ class AllUsers extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get('/person/pages?page=${n})
+        axios.get(`/person/pages?page=${n}`)
         .then(response => {
             this.setState({
                 "persons": response.data.data,
