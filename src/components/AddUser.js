@@ -98,7 +98,7 @@ class AddUser extends Component{
 
         console.log(user);
 
-        axios.post('http://localhost:5000/person', user)
+        axios.post('http://hospital-record-backend.herokuapp.com/person', user)
             .then(res => console.log(res.data));
 
         
