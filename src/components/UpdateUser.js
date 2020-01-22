@@ -45,7 +45,7 @@ class UpdateUser extends Component{
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:5000/person/pages`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/pages`)
         .then(response => {
             totalResults= response.data.totalResult;
             this.setState({
@@ -57,7 +57,7 @@ class UpdateUser extends Component{
 
 
 
-        axios.get(`http://localhost:5000/person/pages?page=1`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/pages?page=1`)
         .then(response => {
             this.setState({
                 "persons": response.data.data,
@@ -127,7 +127,7 @@ class UpdateUser extends Component{
 
             //e.target.id.substring(3);
     
-            axios.put(`http://localhost:5000/person/${e.target.id.substring(3)}`, user)
+            axios.put(`http://hospital-record-backend.herokuapp.com/person/${e.target.id.substring(3)}`, user)
                 .then(res => console.log(res.data));
     
             
@@ -225,7 +225,7 @@ class UpdateUser extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get(`http://localhost:5000/person/pages?page=${n}`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/pages?page=${n}`)
           .then(response => {
               this.setState({
                   "persons": response.data.data,
@@ -250,7 +250,7 @@ class UpdateUser extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get(`http://localhost:5000/person/pages?page=${n}`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/pages?page=${n}`)
         .then(response => {
             this.setState({
                 "persons": response.data.data,
