@@ -41,7 +41,7 @@ class SearchUser extends Component{
     componentDidMount() {
 
 
-        axios.get(`http://localhost:5000/person/query?name=${this.props.search}`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/query?name=${this.props.search}`)
         .then(response => {
             this.setState({
                 "persons": response.data.data
