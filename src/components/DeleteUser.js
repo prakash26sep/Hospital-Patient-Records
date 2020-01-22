@@ -29,7 +29,7 @@ class DeleteUser extends Component{
 
     componentDidMount() {
 
-        axios.get(`http://localhost:5000/person/pages`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/pages`)
           .then(response => {
               totalResults= response.data.totalResult;
               this.setState({
@@ -41,7 +41,7 @@ class DeleteUser extends Component{
 
 
 
-          axios.get(`http://localhost:5000/person/pages?page=1`)
+          axios.get(`http://hospital-record-backend.herokuapp.com/person/pages?page=1`)
           .then(response => {
               this.setState({
                   "persons": response.data.data
@@ -67,7 +67,7 @@ class DeleteUser extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get(`http://localhost:5000/person/pages?page=${n}`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/pages?page=${n}`)
           .then(response => {
               this.setState({
                   "persons": response.data.data,
@@ -92,7 +92,7 @@ class DeleteUser extends Component{
             })
         }
         //db.comments.find().skip(pagesize * (n-1)).limit(pagesize);
-        axios.get(`http://localhost:5000/person/pages?page=${n}`)
+        axios.get(`http://hospital-record-backend.herokuapp.com/person/pages?page=${n}`)
         .then(response => {
             this.setState({
                 "persons": response.data.data,
@@ -111,7 +111,7 @@ class DeleteUser extends Component{
         if (result) {
             //Logic to delete the item
 
-        await axios.delete(`http://localhost:5000/person/${e.target.id}`)
+        await axios.delete(`http://hospital-record-backend.herokuapp.com/person/${e.target.id}`)
         .catch((error) => {console.log(error);})
         .then(
 
@@ -122,7 +122,7 @@ class DeleteUser extends Component{
         )}
 
         if(result){
-        axios.get('http://localhost:5000/person/')
+        axios.get('http://hospital-record-backend.herokuapp.com/person/')
            .then((response) => {
                
                this.setState({
